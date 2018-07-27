@@ -1,0 +1,19 @@
+#mail_confirm_page {
+  /* background-image: url(../../assets/bg.jpg); */
+  background: linear-gradient(to right, #034a79, #176aa2, #1877b8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+}
+
+#mail_confirm {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin: auto;
+  width: 350px;
+  height: 320px;
+}
