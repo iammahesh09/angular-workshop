@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-user-profile',
@@ -17,6 +17,8 @@ export class UserProfileComponent implements OnInit {
     technologie:"Full Stack Developer"
   }
 
+  @Output() getTitleName = new EventEmitter();
+
   fullname(){
     return this.user.firstname +" "+ this.user.lastname
   }
@@ -24,6 +26,7 @@ export class UserProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.getTitleName.emit(this.fullname());
   }
 
 }

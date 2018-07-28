@@ -1,3 +1,156 @@
-<p>
-  edit-user-profile works!
-</p>
+<div class="container">
+  <div class="panel panel-info">
+    <div class="panel-body">
+      <div>
+        <h3 class="panel-title">Profile Photo</h3>
+        <img alt="User Pic" src="../../../assets/user_profile.png" width="150" class="img-fluid">
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-5">Name</div>
+            <div class="col-1">:</div>
+            <div class="col-6">
+              <span [hidden]="nameNotUpdate" class="text-right">{{user.name}}</span>
+              <input type="text" [(ngModel)]="user.name" name="name" [hidden]="nameUpdate" class="float-right form-control">
+              <a  class="edit_btn text-right" (click)="updateName()" [hidden]="nameNotUpdate">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">College :</div>
+            <div class="col-1">:</div>
+            <div class="col-6">
+              <span [hidden]="collegeNotUpdate?true:false" class="text-right">{{user.college}}</span>
+              <input type="text" [(ngModel)]="user.college" name="college" [hidden]="collegeUpdate?true:false" class="float-right form-control">
+              <a  class="edit_btn text-right" (click)="updateCollege()" [hidden]="collegeNotUpdate">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span>Specalization</span>
+            </div>
+            <div class="col-1">:</div>
+            <div class="col-6">
+              <span [hidden]="specalizationNotUpdate?true:false" class="text-right">{{user.specalization}}</span>
+              <input type="text" [(ngModel)]="user.specalization" name="specalization" [hidden]="specalizationUpdate?true:false" class="float-right form-control">
+              <a  class="edit_btn text-right" (click)="updateSpecalization()" [hidden]="specalizationNotUpdate">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-5">
+              <span>you are an Employe</span>
+            </div>
+            <div class="col-1">:</div>
+            <div class="col-6">
+              <input type="checkbox" (change)="isOrg(isChecked)" [(ngModel)]="isChecked">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+
+          <div class="row">
+            <div class="col-5">
+              <span>Email :</span>
+            </div>
+            <div class="col-1">:</div>
+            <div class="col-6">
+              <span [hidden]="emailNotUpdate?true:false" class="text-right">{{user.email}}</span>
+              <input type="text" [(ngModel)]="user.email" name="email" [hidden]="emailUpdate?true:false" class="float-right form-control">
+              <a  class="edit_btn text-right" (click)="updateEmail()" [hidden]="emailNotUpdate">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span>City :</span>
+            </div>
+            <div class="col-1">:</div>
+            <div class="col-6">
+              <span [hidden]="cityNotUpdate?true:false" class="text-right">{{user.city}}</span>
+              <input type="text" [(ngModel)]="user.city" name="city" [hidden]="cityUpdate?true:false" class="float-right form-control">
+              <a  class="edit_btn text-right" (click)="updateCity()" [hidden]="cityNotUpdate">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-5">
+              <span>Year of Pass :</span>
+            </div>
+            <div class="col-1">:</div>
+            <div class="col-6">
+              <span [hidden]="yearPassNotUpdate?true:false" class="text-right">{{user.yearPass}}</span>
+              <input type="text" [(ngModel)]="user.yearPass" name="yearPass" [hidden]="yearPassUpdate?true:false" class="float-right form-control">
+              <a  class="edit_btn text-right" (click)="updateYearofPass()" [hidden]="yearPassNotUpdate">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-6">
+            <div [hidden]="isCheckOrg?true:false">
+              <div class="row">
+                <div class="col-5">
+                  <span>Work Experience :</span>
+                </div>
+                <div class="col-1">:</div>
+                <div class="col-6">
+                  <span [hidden]="workExpNotUpdate?true:false" class="text-right">{{user.workExp}}</span>
+                  <input type="text" [(ngModel)]="user.workExp" name="workExp" [hidden]="workExpUpdate?true:false" class="float-right form-control">
+                  <a  class="edit_btn text-right" (click)="updateWorkExperience()" [hidden]="workExpNotUpdate">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-5">
+                    <span>Technologies :</span>
+                  </div>
+                  <div class="col-1">:</div>
+                  <div class="col-6">
+                    <span [hidden]="technologiesNotUpdate?true:false" class="text-right">{{user.technologies}}</span>
+                    <input type="text" [(ngModel)]="user.technologies" name="technologies" [hidden]="technologiesUpdate?true:false" class="float-right form-control">
+                    <a  class="edit_btn text-right" (click)="updateTechnologies()" [hidden]="technologiesNotUpdate">
+                      <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div [hidden]="isCheckOrg?true:false">
+              <div class="row">
+                <div class="col-5">
+                  <span>Organization Name </span>
+                </div>
+                <div class="col-1">:</div>
+                <div class="col-6">
+                  <span [hidden]="organizationNotUpdate?true:false" class="text-right">{{user.organization}}</span>
+                  <input type="text" [(ngModel)]="user.organization" name="organization" [hidden]="organizationUpdate?true:false" class="float-right form-control">
+                  <a  class="edit_btn text-right" (click)="updateOrganization()" [hidden]="organizationNotUpdate">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+        </div>
+      </div>
+  <div class="panel-footer">
+    <button class="btn btn-primary" (click)="isSave(user)">Save</button>
+  </div>
+</div>
+</div>

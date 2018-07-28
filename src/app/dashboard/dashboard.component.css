@@ -2,10 +2,6 @@
   background-color: indigo;
 }
 
-/* .navbar {
-  z-index: 99;
-} */
-
 .navbar-global .navbar-brand {
   color: white;
 }
@@ -18,17 +14,18 @@
   margin-left: 200px;
   font-weight: bold;
   font-size: 20px;
+  margin-bottom: 0;
 }
 
 .navbar-primary {
   background-color: #041c5a;
   bottom: 0px;
   left: 0px;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 200px;
   height: 100%;
-  z-index: 8;
+  z-index: 1030;
   overflow: hidden;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
@@ -114,6 +111,8 @@
 .main-content {
   /* margin-top: 60px; */
   margin-left: 200px;
+  margin-left: 200px;
+  margin-top: 65px;
   /* padding: 20px; */
 }
 

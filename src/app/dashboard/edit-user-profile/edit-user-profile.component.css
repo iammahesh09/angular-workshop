@@ -1,0 +1,6 @@
+.row{margin-bottom: 5px; line-height: 3}
+.edit_btn{margin-left: 10px;}
+
+.disabledDiv {
+    cursor: not-allowed;
+}
